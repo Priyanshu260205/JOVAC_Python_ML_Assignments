@@ -1,0 +1,40 @@
+Task 7: Conceptual Questions Answer:
+
+What is the difference between Bagging and Boosting?
+How does Random Forest reduce variance?
+What is the weakness of boosting-based methods?
+
+1. What is the difference between Bagging and Boosting?
+
+Bagging (Bootstrap Aggregating):-
+Builds multiple models independently using random subsets of the training data (with replacement).
+Averages their predictions (or uses majority voting) to improve stability and reduce variance.
+Examples: Random Forest, Bagged Decision Trees.
+
+Boosting:-
+Builds models sequentially, where each new model focuses on correcting errors made by the previous ones.
+Combines them to form a strong learner.
+Reduces both bias and variance, but more prone to overfitting.
+Examples: AdaBoost, Gradient Boosting, XGBoost.
+
+2. How does Random Forest reduce variance?
+
+Random Forest builds multiple decision trees using different random subsets of:-
+Training data (via bootstrapping).
+Features (random feature selection at each split).
+By averaging predictions from many uncorrelated trees, it:
+Smooths out noise from individual trees.
+Reduces overfitting.
+
+Results in lower variance and more robust predictions compared to a single decision tree.
+
+3. What is the weakness of boosting-based methods?
+
+Sensitive to Noisy Data and Outliers:-
+Because boosting tries to correct the errors of previous models, it can over-focus on noisy or mislabelled data, leading to overfitting.
+
+Longer Training Time:-
+Boosting is sequential, so it can be slower to train compared to parallel methods like bagging.
+
+Complexity:
+Boosting models are more complex and harder to interpret than simpler models like decision trees.
